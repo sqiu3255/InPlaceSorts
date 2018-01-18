@@ -1,9 +1,11 @@
 
 public class sort {
 	
-	int[] list1 = {3,5,4,2,6,1,8};
-	int[] double[] list2 = {3.0,5.5,4.3,2.7,6.3,1.3,8.7};
-	int[] String[] list1 = {3,5,4,2,6,1,8};
+	int[] list1 = new int[]{3,5,4,2,6,1,8};
+	
+	double[] list2 = new double[]{3.3,6.1,1.9,9.1,6.5};
+	
+	String[] list3 = new String[]{"d","w","b","a","z"};
 	
 	
 	public static void insertionSort(int[] list1)
