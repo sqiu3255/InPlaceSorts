@@ -41,7 +41,13 @@ public class sort {
 	
 	public static void insertionSort(int[] list1)
 	{
-		
+		for (int i = 0; i < list1.length - 1; i++)
+		{	
+			if (list1[i] < list1[i + 1])
+			{
+				xinsertionSort(list1, i, i+1);
+			}
+		}
 	}
 	
 	public static void selectionSort(double[] list2)
@@ -54,21 +60,21 @@ public class sort {
 		
 	}
 	
-	public static void insertionSort(int[]arr, int index1, int index2)
+	public static void xinsertionSort(int[]arr, int index1, int index2)
 	{
 		int temp = arr[index1];
 		arr[index1] = arr[index2];
 		arr[index2] = temp;
 	}
 	
-	public static void selectionSort(int[]arr, int index1, int index2)
+	public static void xselectionSort(int[]arr, int index1, int index2)
 	{
 		int temp = arr[index1];
 		arr[index1] = arr[index2];
 		arr[index2] = temp;
 	}
 	
-	public static void bubbleSort(int[]arr, int index1, int index2)
+	public static void xbubbleSort(int[]arr, int index1, int index2)
 	{
 		int temp = arr[index1];
 		arr[index1] = arr[index2];
