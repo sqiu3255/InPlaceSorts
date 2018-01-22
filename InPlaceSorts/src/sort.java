@@ -1,11 +1,42 @@
+import java.util.Arrays;
 
 public class sort {
 	
-	int[] list1 = new int[]{3,5,4,2,6,1,8};
+	public static void main(String[] args)
+	{
+		//testing arrays
+		int[] test1 = new int[]{1, 4, 4, 5, 2, 4, 3, 17, 0};
+		
+		double[] test2 = new double[]{1.1, 4.1, 4.2, 5.0, 2.0, 4.0, 3.0, 17.0, 0.0};
+		
+		String[] test3 = new String[]{"zebra","tortilla","abba","foo","bar", "aba"};
+		
+		//Insertion Sort Test
+		long start = System.nanoTime();
+		insertionSort(test1);
+		long end = System.nanoTime();
+		long time = end - start;
+		System.out.println("Test1 took: " + time + "nanoseconds");
+		System.out.println(Arrays.toString(test1));
+		
+		//Selection Sort Test 
+		start = System.nanoTime();
+		selectionSort(test2);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("Test2 took: " + time + "nanoseconds");
+		System.out.println(Arrays.toString(test2));
+		
+		//Bubble Sort Test
+		start = System.nanoTime();
+		bubbleSort(test3);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("Test3 took: " + time + "nanoseconds");
+		System.out.println(Arrays.toString(test3));
+		
+	}
 	
-	double[] list2 = new double[]{3.3,6.1,1.9,9.1,6.5};
-	
-	String[] list3 = new String[]{"d","w","b","a","z"};
 	
 	
 	public static void insertionSort(int[] list1)
