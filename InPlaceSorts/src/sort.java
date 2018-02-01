@@ -1,3 +1,10 @@
+/*
+*  Author: Sophia Qiu
+*  Date Created: 01.17.2018
+*  Project Name: Lab 3.1 In Place Sorts
+*/
+
+
 import java.util.Arrays;
 
 public class sort {
