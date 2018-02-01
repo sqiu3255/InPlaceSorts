@@ -24,7 +24,7 @@ public class sort {
 		insertionSort(test1);
 		long end = System.nanoTime();
 		long time = end - start;
-		System.out.println("Test1 took: " + time + "nanoseconds");
+		System.out.println("Insertion Sort Test took: " + time + "nanoseconds");
 		System.out.println(Arrays.toString(test1));
 		
 		//Selection Sort Test 
@@ -32,7 +32,7 @@ public class sort {
 		selectionSort(test2);
 		end = System.nanoTime();
 		time = end - start;
-		System.out.println("Test2 took: " + time + "nanoseconds");
+		System.out.println("Selection Sort Test took: " + time + "nanoseconds");
 		System.out.println(Arrays.toString(test2));
 		
 		//Bubble Sort Test
@@ -40,37 +40,18 @@ public class sort {
 		bubbleSort(test3);
 		end = System.nanoTime();
 		time = end - start;
-		System.out.println("Test3 took: " + time + "nanoseconds");
+		System.out.println("Bubble Sort Test took: " + time + "nanoseconds");
 		System.out.println(Arrays.toString(test3));
 		
 	}
 	
 	
-	
-	public static void insertionSort(int[] list1)
-	{
-		for (int i = 0; i < list1.length - 1; i++)
-		{	
-			if (list1[i] < list1[i + 1])
-			{
-				xinsertionSort(list1, i, i+1);
-			}
-		}
-	}
-	
-	public static void selectionSort(double[] list2)
-	{
-		
-	}
-	
-	public static void bubbleSort(String[] list1)
-	{
-		
-	}
+	// Swapping Code
 	
 	public static void xinsertionSort(int[]arr, int index1, int index2)
 	{
-		int temp = arr[index1];
+		int temp;
+		temp = arr[index1];
 		arr[index1] = arr[index2];
 		arr[index2] = temp;
 	}
@@ -88,5 +69,40 @@ public class sort {
 		arr[index1] = arr[index2];
 		arr[index2] = temp;
 	}
+	
+	
+	
+	
+	
+	public static void insertionSort(int[] list1)
+	{
+		int count = 0; 
+		
+		while (count != 0)
+		{
+			count = 0; 
+			
+			for (int i = 0; i < list1.length - 1; i++)
+			{	
+				if (list1[i] > list1[i + 1])
+				{
+					count++;
+					xinsertionSort(list1, i, i + 1);
+				}
+			}
+		}
+	}
+	
+	public static void selectionSort(double[] list2)
+	{
+		
+	}
+	
+	public static void bubbleSort(String[] list1)
+	{
+		
+	}
+	
+	
 	
 }
