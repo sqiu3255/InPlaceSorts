@@ -1,5 +1,6 @@
 /*
 *  Author: Sophia Qiu
+*  Period 2
 *  Date Created: 01.17.2018
 *  Project Name: Lab 3.1 In Place Sorts
 */
